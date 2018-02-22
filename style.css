@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#slider {
+  display: block;
+  overflow: hidden;
+  width: 70vw;
+  height: 70vh;
+}
+
+.slides {
+  display: block;
+  width: 2800vw;
+  height: 70vh;
+  margin: 0;
+  padding: 0;
+}
+
+.slide {
+  float: left;
+  list-style-type: none;
+  width: 70vw;
+  height: 70vw;
+  vertical-align: middle;
+}
+
+img {
+  width: 70vw;
+}
