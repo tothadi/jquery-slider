@@ -1,37 +1,36 @@
 $(function() {
-  
-  var width = 70 + 'vw';
+
+  var width = 70;
   var animationSpeed = 1000;
   var pause = 3000;
-  var current = 1;
-  
-  var slider = $('#slider');
-  var slideCont = slider.find('.slides');
-  var slide = slideCont.find('slide');
-  
+  var currentSlide = 1;
+
+  var $slider = $('#slider');
+  var $slideCont = $slider.find('.slides');
+  var $slides = $slideCont.find('.slide');
+
   var interval;
-  
+
   function startSlide() {
-    
+
     interval = setInterval(function() {
-      slideCont.animate({'magin-left': '-=' + width}, animationSpeed, function() {
-        current++;
-        if (current === slide.length) {
-         current = 1;
-         slideCont.css({'margin-left': 0});
+      $slideCont.animate({'margin-left': '-=' + width + 'vw'}, animationSpeed, function() {
+        currentSlide++;
+        if (currentSlide === $slides.length) {
+         currentSlide = 1;
+         $slideCont.css({'margin-left': 0});
         }
       });
     }, pause);
-    
+
   }
-  
+
   function stopSlide() {
     clearInterval(interval);
   }
-  
-  slide.on('mouseenter', stopSlide).on('mouseleave', startSlide);
-  
+
+  $slider.on('mouseenter', stopSlide).on('mouseleave', startSlide);
+
   startSlide();
-  
-  
+
 });

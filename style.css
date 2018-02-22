@@ -9,13 +9,14 @@ body {
 }
 
 #slider {
-  display: block;
+  display: flex;
   overflow: hidden;
   width: 70vw;
-  height: 70vh;
+  height: 39.375vw;
+  align-self: center;
 }
 
-.slides {
+#slider .slides {
   display: block;
   width: 2800vw;
   height: 70vh;
@@ -23,12 +24,10 @@ body {
   padding: 0;
 }
 
-.slide {
+#slider .slide {
   float: left;
   list-style-type: none;
   width: 70vw;
-  height: 70vw;
-  vertical-align: middle;
 }
 
 img {
